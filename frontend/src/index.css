@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5EFE6;
+    color: #1A1A1A;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Card Styles */
+.glass-panel {
+  background: #FFFFFF;
+  border: 1px solid #E8E0D4;
+  box-shadow: 0 4px 24px -4px rgba(26, 26, 26, 0.06);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  box-shadow: 0 8px 32px -8px rgba(26, 26, 26, 0.12);
+  transform: translateY(-2px);
+}
+
+.astro-card {
+  background: #FFFFFF;
+  border: 1px solid #E8E0D4;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px -4px rgba(26, 26, 26, 0.06);
+}
+
+.astro-card-dark {
+  background: #1A1A1A;
+  border-radius: 1.5rem;
+  color: #FFFFFF;
+}
+
+/* Buttons */
+.astro-btn-primary {
+  background: #1A1A1A;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.astro-btn-primary:hover {
+  background: #333333;
+}
+
+.astro-btn-secondary {
+  background: #FFFFFF;
+  color: #1A1A1A;
+  border: 1px solid #E8E0D4;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.astro-btn-secondary:hover {
+  background: #F5EFE6;
+}
+
+/* Pills / Category chips */
+.astro-pill {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: #FFFFFF;
+  color: #1A1A1A;
+  border: 1px solid #E8E0D4;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.astro-pill-active {
+  background: #1A1A1A;
+  color: #FFFFFF;
+  border-color: #1A1A1A;
+}
+
+/* Inputs */
+.astro-input {
+  background: #FFFFFF;
+  border: 1px solid #E8E0D4;
+  border-radius: 9999px;
+  color: #1A1A1A;
+  transition: all 0.2s ease;
+}
+
+.astro-input:focus {
+  outline: none;
+  border-color: #1A1A1A;
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.08);
+}
+
+.astro-input-dark {
+  background: #FFFFFF;
+  border: 1px solid #E8E0D4;
+  border-radius: 0.75rem;
+  color: #1A1A1A;
+}
+
+.astro-input-dark:focus {
+  outline: none;
+  border-color: #1A1A1A;
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.08);
+}
+
+/* Legacy aliases for gradual migration */
+.neon-border-purple,
+.neon-border-gold {
+  box-shadow: 0 4px 24px -4px rgba(26, 26, 26, 0.08);
+  border: 1px solid #E8E0D4;
+}
+
+.neon-text-gold,
+.neon-text-purple {
+  text-shadow: none;
+}
+
+/* Warm abstract background */
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background: #F5EFE6;
+  overflow: hidden;
+}
+
+.star {
+  display: none;
+}
+
+/* Celestial art decoration */
+.celestial-art {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image:
+    radial-gradient(circle at 30% 70%, transparent 40%, #C4A882 41%, #C4A882 42%, transparent 43%),
+    radial-gradient(circle at 70% 30%, transparent 35%, #C4A882 36%, #C4A882 37%, transparent 38%),
+    linear-gradient(45deg, transparent 48%, #C4A882 49%, #C4A882 50%, transparent 51%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4A882;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A68B6A;
+}
+
+/* Hide scrollbar for horizontal scroll areas */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Audio Player */
+.audio-player-custom::-webkit-media-controls-panel {
+  background-color: #FFFFFF;
+  border: 1px solid #E8E0D4;
+  border-radius: 0.75rem;
+}
+.audio-player-custom::-webkit-media-controls-current-time-display,
+.audio-player-custom::-webkit-media-controls-time-remaining-display {
+  color: #1A1A1A;
+}
